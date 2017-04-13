@@ -1,26 +1,37 @@
+body {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
 .twitter-content{
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .twitter-nav-container{
   width: 100%;
   height: 50px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
   background: lightblue;
 }
 
+.twitter-nav-container ul {
+  padding: 0px;
+}
+
 .twitter-nav-container-left{
-  width:40%;
+  width:35%;
 }
 
 .twitter-nav-container-right{
-  width:40%;
+  width:35%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2px;
   
 }
 
@@ -28,7 +39,7 @@
   display: flex;
   justify-content: center;
   float: left;
-  width: 10%;
+  width: 30%;
   font-size: 25px;
 }
 
@@ -45,10 +56,20 @@
   list-style: none;
 }
 
+.twitter-nav-container-right-textbox{
+  width: 60%;
+}
+.twitter-nav-container-right-textbox-input{
+  width: 100%;
+}
 
 .twitter-main {
   display: flex;
   justify content: felxt-start;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 

@@ -1,7 +1,9 @@
 .twitter-account {
   width: 300px;
   border: 1px ridge ;
+  border-radius: 2px;
   padding: 2px;
+  margin-right: 4px;
 }
 
 .twitter-account-block, .twitter-trends {
@@ -39,8 +41,13 @@
 }
 
 .twitter-copyright{
+  border-radius: 2px;
   color: grey;
   font-size: 8px;
-  border: 1px solid grey;
+  border: 1px ridge;
   margin: 1px;
+}
+
+.twitter-profile-switch{
+  cursor: pointer;
 }

@@ -1,11 +1,14 @@
 .twitter-time-line {
   width: 100%;
   border: 1px ridge;
+  border-radius: 2px;
 
 }
 
 .twitter-time-line-Header {
-  border: 1px ridge;
+    border-radius: 2px;
+  border-radius: 2px;
+  border-bottom: 1px ridge;
   color: grey;
   margin:; 4px;
 }
@@ -13,7 +16,8 @@
 .twitter-time-line-tweet{
   display: flex;
   justify-contents: flex-start;
-  padding: 2px;margin: 2px;
+  padding: 2px;
+  margin: 2px;
 }
 
 .twitter-time-line-tweeter-image, .twitter-time-line-tweet-bloc { 

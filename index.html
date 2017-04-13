@@ -27,12 +27,15 @@
           <i class="fa fa-twitter" aria-hidden="true"></i>
         </div>
         <div class="twitter-nav-container-right">
-         
-           <input type="text" value="search">
+           <div class="twitter-nav-container-right-textbox">
+             <input type="text" value="search" class="twitter-nav-container-right-textbox-input">
+           </div>
+          
            <div>
              <i class="fa fa-envelope-open" aria-hidden="true"></i>
            </div>
            <div><i class="fa fa-cog" aria-hidden="true"></i></div>
+           <div><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
             
         </div>
       </div>
@@ -65,7 +68,10 @@
          <div class="twitter-new-tweet">
            <textarea rows="2" ng-model="newTweet" class="twitter-new-tweet" ng-keypress="addNewTweet($event)" ng-focus="focusForTweet()" ng-blur="blurForTweet()"></textarea>
          </div>
-       
+       <div class="twitter-profile-switch">
+         <i class="fa fa-user-circle" aria-hidden="true" ng-click="switchUser()"></i>
+         <span ng-click="switchUser()">switch user</span>
+       </div>
     </div>
       <div class="twitter-trends">
           <div class="twitter-trends-header">
@@ -93,7 +99,8 @@
         </div>
         <div class="twitter-time-line-tweet" ng-repeat="tweet in user.timeline">
           <div class="twitter-time-line-tweeter-image">
-             <img src="{{tweet.image}}" alt="">
+             <img ng-if="user.name=='Donald'" src="http://content.wtsp.com/photo/2016/11/09/trump_1478730700260_6991633_ver1.0.jpg" alt="" height="42" width="42">
+             <img ng-if="user.name=='Melania'" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Melania_Knauss-Trump.jpg" alt="" height="42" width="42">
           </div>
           <div class="twitter-time-line-tweet-block">
              <div class="twitter-time-line-tweet-tweeter">

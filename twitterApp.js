@@ -16,15 +16,33 @@ twitterApp.controller('twitterCtrl', ['$scope', function($scope){
         },
          { 
           image: "someImage",
-          name: "nameOne",
+          name: "nameTwo",
           timeAgo: "6h ago",
           tweet: "This is tweet two Donald"
         },
          { 
           image: "someImage",
-          name: "nameOne",
-          timeAgo: "19h ago",
+          name: "nameThree",
+          timeAgo: "9h ago",
           tweet: "This is tweet three Donald"
+        },
+        { 
+          image: "someImage",
+          name: "nameFour",
+          timeAgo: "14h ago",
+          tweet: "This is tweet four Donald"
+        },
+         { 
+          image: "someImage",
+          name: "nameFive",
+          timeAgo: "16h ago",
+          tweet: "This is tweet five Donald"
+        },
+         { 
+          image: "someImage",
+          name: "nameSix",
+          timeAgo: "19h ago six Donald",
+          tweet: "This is tweet six Donald"
         }
       ]
     };
@@ -44,13 +62,31 @@ twitterApp.controller('twitterCtrl', ['$scope', function($scope){
           },
            { 
             image: "someImage",
-            name: "nameOne",
+            name: "nameTwo",
             timeAgo: "6h ago",
             tweet: "This is tweet two Melania"
           },
            { 
             image: "someImage",
-            name: "nameOne",
+            name: "nameThree",
+            timeAgo: "9h ago",
+            tweet: "This is tweet three Melania"
+          },
+          { 
+            image: "someImage",
+            name: "nameFour",
+            timeAgo: "14h ago",
+            tweet: "This is tweet one Melania"
+          },
+           { 
+            image: "someImage",
+            name: "nameFive",
+            timeAgo: "16h ago",
+            tweet: "This is tweet two Melania"
+          },
+           { 
+            image: "someImage",
+            name: "nameSix",
             timeAgo: "19h ago",
             tweet: "This is tweet three Melania"
           }
@@ -98,7 +134,14 @@ twitterApp.controller('twitterCtrl', ['$scope', function($scope){
       if($scope.newTweet === ""){
         $scope.newTweet = "compose new Tweet";
       }
-      
+    };
+    
+    $scope.switchUser = function(){
+      if($scope.user.name === "Melania"){
+        $scope.user = $scope.Donald;
+      }else{
+        $scope.user = $scope.Melania;
+      }
     }
     
 }]);
