@@ -22,6 +22,11 @@ body {
   padding: 0px;
 }
 
+.twitter-nav-container li:hover {
+  background: grey;
+  cursor: pointer;
+}
+
 .twitter-nav-container-left{
   width:35%;
 }
@@ -33,6 +38,10 @@ body {
   justify-content: space-between;
   padding: 2px;
   
+}
+
+.twitter-nav-container-right i:hover{
+  cursor: pointer;
 }
 
 .twitter-nav-bird {

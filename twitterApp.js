@@ -95,19 +95,19 @@ twitterApp.controller('twitterCtrl', ['$scope', function($scope){
     $scope.user = $scope.Donald;
     $scope.trends = [
         {
-          trendText: "tendOne",
+          trendText: "trendOne",
           tweetCount: "11k tweets"
         },
         {
-          trendText: "tendTwo",
+          trendText: "trendTwo",
           tweetCount: "5k tweets"
         },
         {
-          trendText: "tendThree",
+          trendText: "trendThree",
           tweetCount: "3.1k tweets"
         },
         {
-          trendText: "tendFour",
+          trendText: "trendFour",
           tweetCount: "2.2k tweets"
         }
       ];
