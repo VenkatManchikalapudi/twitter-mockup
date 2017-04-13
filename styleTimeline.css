@@ -1,0 +1,32 @@
+.twitter-time-line {
+  width: 100%;
+  border: 1px ridge;
+
+}
+
+.twitter-time-line-Header {
+  border: 1px ridge;
+  color: grey;
+  margin:; 4px;
+}
+
+.twitter-time-line-tweet{
+  display: flex;
+  justify-contents: flex-start;
+  padding: 2px;margin: 2px;
+}
+
+.twitter-time-line-tweeter-image, .twitter-time-line-tweet-bloc { 
+ padding: 2px;
+ margin: 2px;
+}
+
+.twitter-time-line-tweet-tweeter {
+  font-weight: bold;
+}
+
+.twitter-time-line-tweet-tweeter-time-ago {
+  font-weight: normal;
+  font-size: 10px;
+  color: grey;
+}

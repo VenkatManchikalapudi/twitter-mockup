@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styleAccount.css" />
+  <link rel="stylesheet" href="styleTimeline.css" />
+  <script src="twitterApp.js"></script>
+</head>
+<body>
+
+  <div ng-app="twitterApp" ng-controller="twitterCtrl" class="twitter-content">
+  
+    <div class="twitter-nav">
+      <div class="twitter-nav-container">
+        <div class="twitter-nav-container-left">
+          <ul class="twitter-nav-options-container">
+            <li><i class="fa fa-home" aria-hidden="true"></i>Home</li>
+            <li><i class="fa fa-at" aria-hidden="true"></i>connect</li>
+            <li><i class="fa fa-hashtag" aria-hidden="true"></i>Discover</li>
+            <li><i class="fa fa-user" aria-hidden="true"></i> Me</li>
+          </ul>
+        </div>
+        <div class="twitter-nav-bird">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+        <div class="twitter-nav-container-right">
+         
+           <input type="text" value="search">
+           <div>
+             <i class="fa fa-envelope-open" aria-hidden="true"></i>
+           </div>
+           <div><i class="fa fa-cog" aria-hidden="true"></i></div>
+            
+        </div>
+      </div>
+    </div>
+    
+    <div class="twitter-main">
+      
+      <div class="twitter-account">
+      <div class="twitter-account-block">
+        
+          <div class="twitter-profile-image">
+             <i class="fa fa-address-card" aria-hidden="true"></i>
+          </div>
+          
+         <div class="twitter-profile-stats-container">
+           <div class="twitter-profile-stats">
+             <div>TWEETS</div>
+             <div>{{user.stats.TWEETS}}</div>
+           </div>
+           <div class="twitter-profile-stats">
+             <div>FOLLOWING</div>
+             <div>{{user.stats.FOLLOWING}}</div>
+           </div>
+            <div >
+             <div>FOLLOWERS</div>
+             <div>{{user.stats.FOLLOWERS}}</div>
+           </div>
+         </div>
+         
+         <div class="twitter-new-tweet">
+           <textarea rows="2" ng-model="newTweet" class="twitter-new-tweet" ng-keypress="addNewTweet($event)" ng-focus="focusForTweet()" ng-blur="blurForTweet()"></textarea>
+         </div>
+       
+    </div>
+      <div class="twitter-trends">
+          <div class="twitter-trends-header">
+            <span>Trends</span>
+            <span>.</span>
+            <a href="void(0)">change</a>
+          </div>
+         <div class="twitter-trends-text">
+           <ul>
+             <li ng-repeat="trend in trends">
+               <div>#{{trend.trendText}}</div>
+               <div>{{trend.tweetCount}}</div>
+             </li>
+           </ul>
+         </div>
+        </div>
+      <div class="twitter-copyright">
+        <p>2014 Twitter copyright</p>
+      </div>
+    </div>
+    
+      <div class="twitter-time-line">
+        <div class="twitter-time-line-Header">
+          <h3>Tweets</h3>
+        </div>
+        <div class="twitter-time-line-tweet" ng-repeat="tweet in user.timeline">
+          <div class="twitter-time-line-tweeter-image">
+             <img src="{{tweet.image}}" alt="">
+          </div>
+          <div class="twitter-time-line-tweet-block">
+             <div class="twitter-time-line-tweet-tweeter">
+              <span>{{tweet.name}}</span>
+              <span class="twitter-time-line-tweet-tweeter-time-ago"> . {{tweet.timeAgo}}</span>
+            </div>
+            <div class="twitter-time-line-tweet-message">
+              <span>{{tweet.tweet}}</span>
+            </div>
+          </div>
+          <div ng-if="tweet.hasImage">
+            <!--shows when there is an image associated with the tweet-->
+          </div>
+        </div>
+        <div>
+          
+        </div>
+      </div>
+    
+    </div>
+    
+  </div>
+</body>
+
+</html>

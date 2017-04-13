@@ -1,0 +1,46 @@
+.twitter-account {
+  width: 300px;
+  border: 1px ridge ;
+  padding: 2px;
+}
+
+.twitter-account-block, .twitter-trends {
+  margin: 4px;
+  border: 1px ridge;
+}
+
+.twitter-profile-image {
+  display: flex;
+  justify-content: center;
+  align-tiems: stretch;
+  font-size: 100px;
+}
+
+.twitter-profile-stats-container{
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.twitter-trends-text ul{
+  padding: 0px;
+  color: skyblue;
+}
+
+.twitter-trends-text li{
+  list-style: none;
+  margin: 3px;
+  
+}
+
+.twitter-new-tweet {
+  margin: 10px;
+  width: 90%;
+}
+
+.twitter-copyright{
+  color: grey;
+  font-size: 8px;
+  border: 1px solid grey;
+  margin: 1px;
+}
